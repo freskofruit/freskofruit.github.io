@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fresko Fruit, frutta e dolci napoletani a Borgo Bovio (Terni)</title>
+<meta name="description" content="Fresko Fruit a Borgo Bovio, Terni: frutta e verdura selezionata e dolci napoletani (sfogliatelle, babà, zeppole, graffe, code d'aragosta). Consegna a domicilio e forniture per aziende. Ordina su WhatsApp.">
+<meta name="theme-color" content="#FFD43B">
+<meta property="og:title" content="Fresko Fruit, Borgo Bovio (Terni)">
+<meta property="og:description" content="Frutta selezionata e dolci napoletani. Ordina su WhatsApp.">
+<meta property="og:image" content="img/logo.jpg">
+<link rel="icon" href="img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Permanent+Marker&display=swap" rel="stylesheet">
+<style>
+:root{
+  --giallo:#FFD43B;
+  --arancio:#FF6A1A;
+  --lime:#A6E03C;
+  --viola:#3E1C74;
+  --notte:#1C1530;
+  --latte:#FFFBF2;
+  --rosa:#FF7AB6;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;overflow-x:clip}
+body{background:var(--latte);color:var(--notte);font:400 17px/1.55 "Bricolage Grotesque",system-ui,sans-serif;font-variation-settings:"wdth" 100;overflow-x:clip}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--arancio);outline-offset:3px;border-radius:8px}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+.display{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-variation-settings:"wdth" 75,"opsz" 96;line-height:.86;letter-spacing:-.02em;text-transform:uppercase}
+.tag{font-family:"Permanent Marker",cursive;font-weight:400;letter-spacing:.01em}
+
+/* grana leggera su tutta la pagina */
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:60;opacity:.07;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* tenda a righe del fruttivendolo */
+.tenda{height:46px;position:relative;z-index:3;background:repeating-linear-gradient(90deg,var(--arancio) 0 40px,var(--latte) 40px 80px);
+  -webkit-mask:radial-gradient(20px 14px at 20px 32px,#000 98%,transparent) 0 0/40px 46px repeat-x,linear-gradient(#000,#000) 0 0/100% 32px no-repeat;
+  mask:radial-gradient(20px 14px at 20px 32px,#000 98%,transparent) 0 0/40px 46px repeat-x,linear-gradient(#000,#000) 0 0/100% 32px no-repeat;
+  filter:drop-shadow(0 6px 0 rgba(28,21,48,.15))}
+
+/* WhatsApp */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:700 17px/1 "Bricolage Grotesque",sans-serif;text-decoration:none;border-radius:999px;padding:17px 26px;border:2.5px solid var(--notte);transition:transform .18s cubic-bezier(.3,1.6,.5,1),box-shadow .18s ease}
+.btn svg{width:21px;height:21px;flex:none}
+.btn-pieno{background:var(--notte);color:#fff;box-shadow:4px 4px 0 var(--arancio)}
+.btn-pieno:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--arancio)}
+.btn-vuoto{background:#fff;color:var(--notte);box-shadow:4px 4px 0 var(--notte)}
+.btn-vuoto:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--notte)}
+.btn:active{transform:translate(2px,2px);box-shadow:0 0 0 transparent}
+
+/* barra anteprima + nav */
+.anteprima{background:var(--notte);color:#d8d2ea;font-size:13px;text-align:center;padding:7px 16px}
+.anteprima b{color:var(--giallo)}
+header{position:sticky;top:0;z-index:40;background:var(--giallo);border-bottom:2.5px solid var(--notte)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:70px}
+.marchio{display:flex;align-items:center;gap:10px;text-decoration:none}
+.marchio img{width:48px;height:48px;border-radius:50%;object-fit:cover;border:2.5px solid var(--notte);background:#fff}
+.marchio b{font:800 28px/1 "Bricolage Grotesque",sans-serif;font-variation-settings:"wdth" 75;text-transform:uppercase;letter-spacing:-.01em}
+.nav ul{display:flex;gap:24px;list-style:none;font-weight:600;font-size:16px}
+.nav ul a{text-decoration:none;background:linear-gradient(var(--notte),var(--notte)) 0 100%/0 2.5px no-repeat;transition:background-size .2s}
+.nav ul a:hover{background-size:100% 2.5px}
+.nav .btn{padding:11px 18px;font-size:15px;box-shadow:3px 3px 0 var(--arancio)}
+
+/* HERO */
+.hero{background:var(--giallo);position:relative;overflow:hidden;border-bottom:2.5px solid var(--notte)}
+.hero{background:radial-gradient(90% 70% at 75% 45%,#FFE27A 0,var(--giallo) 55%,#FBC41F 100%)}
+.eco{position:absolute;left:50%;bottom:-.12em;transform:translateX(-50%);font:800 clamp(160px,30vw,420px)/.8 "Bricolage Grotesque",sans-serif;font-variation-settings:"wdth" 75;text-transform:uppercase;letter-spacing:-.03em;color:transparent;-webkit-text-stroke:2px rgba(28,21,48,.09);white-space:nowrap;pointer-events:none;user-select:none}
+.raggi{position:absolute;inset:-18%;border-radius:50%;background:repeating-conic-gradient(from 0deg,rgba(255,255,255,.55) 0 7deg,transparent 7deg 18deg);-webkit-mask:radial-gradient(closest-side,#000 30%,transparent 100%);mask:radial-gradient(closest-side,#000 30%,transparent 100%);z-index:-1}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:24px;padding:28px 0 64px;position:relative;min-height:min(680px,calc(100svh - 150px))}
+.hero h1{font-size:clamp(64px,9.4vw,128px)}
+.hero h1 .l2{color:#fff;-webkit-text-stroke:3px var(--notte);paint-order:stroke fill;text-shadow:6px 6px 0 var(--arancio)}
+.hero .sotto{font-size:clamp(19px,1.7vw,23px);font-weight:500;max-width:30ch;margin:26px 0 32px}
+.hero .azioni{display:flex;gap:14px;flex-wrap:wrap}
+.mascotte{position:relative;isolation:isolate;justify-self:center;width:min(470px,100%);margin-bottom:24px}
+.mascotte img{width:100%;filter:drop-shadow(0 18px 24px rgba(120,70,0,.18))}
+.sticker{position:absolute;font-family:"Permanent Marker",cursive;font-size:clamp(16px,1.6vw,21px);line-height:1.05;padding:10px 16px;border:2.5px solid var(--notte);border-radius:14px;box-shadow:4px 4px 0 var(--notte);white-space:nowrap}
+.s1{top:6%;left:-4%;background:var(--rosa);transform:rotate(-9deg)}
+.s2{top:44%;right:-6%;background:var(--lime);transform:rotate(7deg)}
+.s3{bottom:-7%;right:6%;background:#fff;transform:rotate(-4deg)}
+
+@media (prefers-reduced-motion:no-preference){
+  .hero h1 span{display:block;animation:su .8s cubic-bezier(.2,1.4,.4,1) both}
+  .hero h1 .l2{animation-delay:.12s}
+  .mascotte img{animation:entra .9s cubic-bezier(.2,1.3,.4,1) .2s both}
+  .sticker{animation:pop .5s cubic-bezier(.3,1.8,.5,1) both}
+  .s1{animation-delay:.7s}.s2{animation-delay:.85s}.s3{animation-delay:1s}
+  @keyframes su{from{transform:translateY(60%);opacity:0}}
+  @keyframes entra{from{transform:scale(.8) rotate(-6deg);opacity:0}}
+  @keyframes pop{from{scale:0;opacity:0}}
+  .nastro-traccia{animation:scorri 28s linear infinite}
+  .raggi{animation:gira 60s linear infinite}
+  @keyframes gira{to{rotate:360deg}}
+  @keyframes scorri{to{transform:translateX(-50%)}}
+}
+
+/* nastro prodotti */
+.nastro{background:var(--arancio);border-block:2.5px solid var(--notte);overflow:hidden;padding:16px 0;position:relative;z-index:2;width:calc(100% + 40px);margin:-26px -20px 0;transform:rotate(-1.6deg);box-shadow:0 8px 0 rgba(28,21,48,.12)}
+.nastro-traccia{display:flex;width:max-content}
+.nastro-traccia span{font:800 clamp(30px,4vw,48px)/1 "Bricolage Grotesque",sans-serif;font-variation-settings:"wdth" 75;text-transform:uppercase;color:var(--notte);padding:0 22px;display:flex;align-items:center;gap:44px;white-space:nowrap}
+.nastro-traccia span::after{content:"";width:22px;height:22px;background:var(--giallo);border:2.5px solid var(--notte);border-radius:50%;flex:none}
+
+/* sezioni */
+.sez{padding:96px 0;position:relative}
+.titolo{font-size:clamp(52px,7.4vw,104px);margin-bottom:18px}
+.intro{font-size:20px;max-width:44ch;font-weight:500}
+
+/* dolci: polaroid */
+.dolci-testa{display:grid;grid-template-columns:1fr auto;align-items:end;gap:24px;margin-bottom:54px}
+.dolci-testa .tag{font-size:26px;color:var(--arancio);transform:rotate(-4deg);display:inline-block}
+.polaroid-griglia{display:grid;grid-template-columns:repeat(3,minmax(0,300px));justify-content:center;gap:42px 38px}
+.polaroid{background:#fff;padding:12px 12px 16px;border:2.5px solid var(--notte);border-radius:6px;box-shadow:6px 6px 0 var(--notte);transition:transform .25s cubic-bezier(.3,1.6,.5,1);position:relative}
+.polaroid:nth-child(3n+1){transform:rotate(-2.5deg)}
+.polaroid:nth-child(3n+2){transform:rotate(1.8deg) translateY(14px)}
+.polaroid:nth-child(3n){transform:rotate(-1deg)}
+.polaroid:hover{transform:rotate(0) scale(1.03);z-index:2}
+.polaroid::before{content:"";position:absolute;top:-14px;left:50%;width:84px;height:26px;transform:translateX(-50%) rotate(-3deg);background:rgba(255,212,59,.85);border:1.5px solid rgba(28,21,48,.25)}
+.polaroid:nth-child(even)::before{background:rgba(166,224,60,.85)}
+.polaroid img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:2px}
+.polaroid figcaption{font-family:"Permanent Marker",cursive;font-size:25px;text-align:center;margin-top:10px;line-height:1.1}
+.nota{margin-top:58px;text-align:center;font-size:17px}
+.nota a{font-weight:700}
+
+/* vassoi */
+.vassoi{background:radial-gradient(80% 90% at 85% 40%,#5B2CA6 0,#3E1C74 45%,#24104A 100%);color:#EEE8FB;border-block:2.5px solid var(--notte);overflow:hidden}
+.vassoi .collage .raggi{background:repeating-conic-gradient(from 0deg,rgba(255,212,59,.22) 0 7deg,transparent 7deg 18deg)}
+.vassoi-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.vassoi .titolo{color:var(--giallo)}
+.vassoi .titolo .bianco{color:#fff;display:block}
+.vassoi .intro{color:#EEE8FB}
+.passi{list-style:none;display:grid;gap:14px;margin:30px 0 36px;counter-reset:p}
+.passi li{counter-increment:p;display:grid;grid-template-columns:46px 1fr;align-items:center;gap:14px;font-size:18px}
+.passi li::before{content:counter(p);display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--giallo);color:var(--notte);font:800 22px/1 "Bricolage Grotesque",sans-serif;border:2.5px solid var(--notte)}
+.vassoi .btn-pieno{background:var(--giallo);color:var(--notte);box-shadow:4px 4px 0 var(--arancio)}
+.collage{position:relative;aspect-ratio:1;width:min(440px,100%);justify-self:center}
+.collage img{position:absolute;width:54%;aspect-ratio:1;object-fit:cover;border-radius:50%;border:3px solid var(--notte);box-shadow:6px 6px 0 var(--notte)}
+.collage img:nth-child(1){top:2%;left:2%}
+.collage img:nth-child(2){top:20%;right:0}
+.collage img:nth-child(3){bottom:0;left:20%}
+.collage .tag{position:absolute;bottom:8%;right:-2%;background:var(--rosa);color:var(--notte);font-size:22px;padding:10px 16px;border:2.5px solid var(--notte);border-radius:14px;transform:rotate(8deg);box-shadow:4px 4px 0 var(--notte)}
+
+/* frutta */
+.frutta{background:var(--latte);overflow:hidden}
+.frutta .foto-box{position:relative;justify-self:center;width:min(380px,100%)}
+.frutta .foto-box::before{content:"";position:absolute;inset:-14% -18% -10% -12%;background:var(--lime);border-radius:58% 42% 55% 45%/48% 58% 42% 52%;z-index:0}
+.frutta-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:center}
+.frutta .foto{position:relative;z-index:1;width:100%;border:2.5px solid var(--notte);border-radius:28px;overflow:hidden;box-shadow:8px 8px 0 var(--notte);transform:rotate(-2deg)}
+.frutta .foto img{width:100%;aspect-ratio:1;object-fit:cover}
+.punti{display:grid;gap:14px;margin-top:28px}
+.punto{background:#fff;border:2.5px solid var(--notte);border-radius:18px;padding:18px 20px;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;box-shadow:4px 4px 0 var(--notte)}
+.punto .ico{width:48px;height:48px;border-radius:50%;background:var(--lime);border:2.5px solid var(--notte);display:grid;place-items:center}
+.punto .ico svg{width:24px;height:24px}
+.punto b{display:block;font-size:19px}
+
+/* aziende */
+.aziende-box{background:var(--notte);color:#fff;border-radius:32px;padding:56px;display:grid;grid-template-columns:1.3fr auto;gap:40px;align-items:center;position:relative;overflow:hidden}
+.aziende-box::after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;background:var(--arancio);right:-90px;top:-110px;opacity:.9}
+.aziende-box .titolo{color:#fff;font-size:clamp(44px,5.6vw,80px);position:relative;z-index:1}
+.aziende-box p{font-size:19px;max-width:42ch;color:#DCD6EC;position:relative;z-index:1}
+.chi{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;position:relative;z-index:1}
+.chi span{border:2px solid rgba(255,255,255,.35);border-radius:999px;padding:6px 14px;font-weight:600;font-size:15px}
+.aziende-box .btn{position:relative;z-index:1;background:var(--giallo);color:var(--notte);border-color:var(--giallo);box-shadow:4px 4px 0 var(--arancio)}
+
+/* dove */
+.dove-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:stretch}
+.scheda{background:var(--giallo);border:2.5px solid var(--notte);border-radius:28px;padding:38px;box-shadow:8px 8px 0 var(--notte)}
+.scheda dl{display:grid;gap:22px;margin:0 0 30px}
+.scheda dt{font-weight:700;font-size:15px;opacity:.75}
+.scheda dd{font-size:21px;font-weight:600;line-height:1.3}
+.scheda dd a{text-decoration-thickness:2px;text-underline-offset:4px}
+.scheda .azioni{display:flex;flex-wrap:wrap;gap:12px}
+.re{border:2.5px solid var(--notte);border-radius:28px;background:#fff;display:grid;place-items:center;padding:30px;text-align:center;position:relative;overflow:hidden}
+.re img{width:min(320px,90%)}
+.re .tag{font-size:26px;margin-top:6px;transform:rotate(-3deg)}
+
+footer{background:var(--notte);color:#cfc8e4;padding:34px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{color:var(--giallo)}
+
+.wa-fisso{position:fixed;right:16px;bottom:16px;z-index:50;display:none;background:#25D366;color:var(--notte);box-shadow:4px 4px 0 var(--notte);transition:opacity .25s,transform .25s}
+.wa-fisso.nascosto{opacity:0;transform:translateY(20px);pointer-events:none}
+
+@media (max-width:960px){
+  .nav ul{display:none}
+  .hero-grid,.vassoi-grid,.frutta-grid,.dove-grid,.aziende-box{grid-template-columns:1fr}
+  .hero-grid{padding:30px 0 52px;gap:6px}
+  .mascotte{width:min(380px,92%);order:-1}
+  .polaroid-griglia{grid-template-columns:repeat(2,minmax(0,1fr));gap:34px 20px}
+  .polaroid figcaption{font-size:20px}
+  .dolci-testa{grid-template-columns:1fr}
+  .sez{padding:72px 0}
+  .nastro{margin-top:-18px}
+  .frutta .foto-box{width:min(320px,86%)}
+  .aziende-box{padding:38px 26px}
+  .wa-fisso{display:inline-flex}
+  .nav .btn{display:none}
+  footer{padding-bottom:96px}
+}
+@media (max-width:480px){
+  .hero h1{font-size:clamp(58px,18vw,84px)}
+  .hero h1 .l2{-webkit-text-stroke:2px var(--notte);text-shadow:4px 4px 0 var(--arancio)}
+  .hero .azioni .btn{flex:1 1 100%}
+  .sticker{font-size:15px;padding:8px 12px}
+  .s1{left:0}.s2{right:-2%}
+  .scheda{padding:26px}
+  .scheda .azioni .btn{flex:1 1 100%}
+}
+</style>
+</head>
+<body>
+
+<div class="anteprima">Anteprima realizzata da <b>FRAME Agency</b> per Fresko Fruit</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="marchio" href="#top" aria-label="Fresko Fruit, inizio pagina"><img src="img/logo.jpg" alt="" width="48" height="48"><b>Fresko Fruit</b></a>
+    <ul>
+      <li><a href="#dolci">Dolci</a></li>
+      <li><a href="#vassoi">Vassoi</a></li>
+      <li><a href="#frutta">Frutta e verdura</a></li>
+      <li><a href="#aziende">Aziende</a></li>
+      <li><a href="#dove">Dove siamo</a></li>
+    </ul>
+    <a class="btn btn-pieno" data-wa="Ciao Fresko Fruit! Vorrei un'informazione." href="#"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#wa"/></svg>Scrivici</a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="tenda" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <h1 class="display"><span>Il re della</span><span class="l2">frutta fresca</span></h1>
+      <p class="sotto">Frutta e verdura selezionata e dolci napoletani a Borgo Bovio. Ordini su WhatsApp, te li portiamo a casa.</p>
+      <div class="azioni">
+        <a class="btn btn-pieno" data-wa="Ciao Fresko Fruit! Vorrei ordinare." href="#"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#wa"/></svg>Ordina su WhatsApp</a>
+        <a class="btn btn-vuoto" href="#dolci">Vedi i dolci</a>
+      </div>
+    </div>
+    <div class="mascotte">
+      <span class="raggi" aria-hidden="true"></span>
+      <img src="img/mascotte.png" alt="Il logo di Fresko Fruit: il titolare con la corona e una cassetta di frutta e verdura" width="900" height="900">
+      <span class="sticker s1">Dolci napoletani</span>
+      <span class="sticker s2">Consegna a casa</span>
+      <span class="sticker s3">Borgo Bovio, Terni</span>
+    </div>
+  </div>
+</section>
+
+<div class="nastro" aria-hidden="true">
+  <div class="nastro-traccia">
+    <span>Sfogliatelle</span><span>Babà</span><span>Zeppole</span><span>Graffe</span><span>Code d'aragosta</span><span>Ricce</span><span>Frutta di stagione</span>
+    <span>Sfogliatelle</span><span>Babà</span><span>Zeppole</span><span>Graffe</span><span>Code d'aragosta</span><span>Ricce</span><span>Frutta di stagione</span>
+  </div>
+</div>
+
+<section class="sez" id="dolci">
+  <div class="wrap">
+    <div class="dolci-testa">
+      <div>
+        <h2 class="display titolo">Un pezzo<br>di Napoli</h2>
+        <p class="intro">I dolci della tradizione napoletana, in vetrina accanto alla frutta. Scrivici e prenota i tuoi.</p>
+      </div>
+      <span class="tag">foto dal nostro bancone</span>
+    </div>
+    <div class="polaroid-griglia">
+      <figure class="polaroid"><img src="img/sfogliatelle.jpg" alt="Sfogliatelle frolle e ricce" loading="lazy" width="315" height="315"><figcaption>Sfogliatelle</figcaption></figure>
+      <figure class="polaroid"><img src="img/zeppole.jpg" alt="Zeppole con crema e amarena" loading="lazy" width="315" height="315"><figcaption>Zeppole</figcaption></figure>
+      <figure class="polaroid"><img src="img/baba.jpg" alt="Babà" loading="lazy" width="315" height="315"><figcaption>Babà</figcaption></figure>
+      <figure class="polaroid"><img src="img/graffe.jpg" alt="Graffe zuccherate" loading="lazy" width="315" height="315"><figcaption>Graffe</figcaption></figure>
+      <figure class="polaroid"><img src="img/code-aragosta.jpg" alt="Code d'aragosta e ricce" loading="lazy" width="315" height="315"><figcaption>Code d'aragosta</figcaption></figure>
+      <figure class="polaroid"><img src="img/baba-farciti.jpg" alt="Babà farciti con crema, cioccolato e pistacchio" loading="lazy" width="315" height="315"><figcaption>Babà farciti</figcaption></figure>
+    </div>
+    <p class="nota">Ogni giorno cambia qualcosa: <a data-wa="Ciao Fresko Fruit! Cosa avete oggi in vetrina?" href="#">chiedici cosa c'è oggi</a>.</p>
+  </div>
+</section>
+
+<section class="sez vassoi" id="vassoi">
+  <div class="wrap vassoi-grid">
+    <div>
+      <h2 class="display titolo">Vassoi<span class="bianco">per le feste</span></h2>
+      <p class="intro">Per il pranzo di Natale, un compleanno o un regalo in ufficio: un vassoio di dolci napoletani o un cesto di frutta, preparato da noi.</p>
+      <ol class="passi">
+        <li>Scrivici su WhatsApp quanti siete e cosa ti piace.</li>
+        <li>Ti proponiamo il vassoio e ti diciamo il prezzo.</li>
+        <li>Lo ritiri in negozio o te lo portiamo a casa.</li>
+      </ol>
+      <a class="btn btn-pieno" data-wa="Ciao Fresko Fruit! Vorrei prenotare un vassoio per le feste. Siamo in ... persone, per il giorno ..." href="#"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#wa"/></svg>Prenota il tuo vassoio</a>
+    </div>
+    <div class="collage" aria-hidden="true" style="isolation:isolate">
+      <span class="raggi"></span>
+      <img src="img/zeppole.jpg" alt="" loading="lazy">
+      <img src="img/sfogliatelle.jpg" alt="" loading="lazy">
+      <img src="img/baba-farciti.jpg" alt="" loading="lazy">
+      <span class="tag">Natale 2026</span>
+    </div>
+  </div>
+</section>
+
+<section class="sez frutta" id="frutta">
+  <div class="wrap frutta-grid">
+    <div class="foto-box"><div class="foto"><img src="img/frutta.jpg" alt="Il banco di Fresko Fruit con ananas, mango, melograni e frutta esotica" loading="lazy" width="315" height="315"></div></div>
+    <div>
+      <h2 class="display titolo">Frutta e verdura scelta</h2>
+      <p class="intro">Prodotti italiani e certificati, dai migliori produttori.</p>
+      <div class="punti">
+        <div class="punto"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.8z"/></svg></span><div><b>Qualità extra</b>Quello che vedi sul banco, scelto pezzo per pezzo.</div></div>
+        <div class="punto"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="2.5"/><circle cx="18" cy="17" r="2.5"/><path d="M8.5 17h7M3.5 17V9h8v8M11.5 11h4l3 3.5V17"/></svg></span><div><b>Consegna a domicilio</b>Fai la spesa su WhatsApp e te la portiamo a casa.</div></div>
+        <div class="punto"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c6 0 13-4 14-14C9 5 5 11 5 19zM5 19l7-7"/></svg></span><div><b>Sempre di stagione</b>Arriva fresca al mattino, finché dura.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sez" id="aziende">
+  <div class="wrap">
+    <div class="aziende-box">
+      <div>
+        <h2 class="display titolo">Hai un locale?</h2>
+        <p>Forniture di frutta, verdura e dolci a prezzi convenienti, con consegna, per chi ne ha bisogno ogni settimana.</p>
+        <div class="chi"><span>Bar</span><span>Ristoranti</span><span>Uffici</span><span>Hotel</span></div>
+      </div>
+      <a class="btn" data-wa="Ciao Fresko Fruit! Ho un'attività e vorrei un preventivo per una fornitura." href="#"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#wa"/></svg>Chiedi un preventivo</a>
+    </div>
+  </div>
+</section>
+
+<section class="sez" id="dove" style="padding-top:0">
+  <div class="wrap">
+    <div class="scheda dove-grid">
+      <div>
+        <h2 class="display titolo" style="margin:0">Passa da noi</h2>
+        <p class="intro" style="margin-top:14px">Seguici su <a href="https://www.facebook.com/NaviglioAldo" target="_blank" rel="noopener">Facebook</a> per vedere cosa arriva ogni giorno.</p>
+      </div>
+      <div>
+      <dl>
+        <div><dt>Indirizzo</dt><dd>Via Tre Venezie 27<br>Borgo Bovio, 05100 Terni</dd></div>
+        <div><dt>Telefono e WhatsApp</dt><dd><a href="tel:+393471890075">347 189 0075</a></dd></div>
+        <div><dt>Orari</dt><dd>Scrivici per gli orari di oggi</dd></div>
+      </dl>
+      <div class="azioni">
+        <a class="btn btn-pieno" data-wa="Ciao Fresko Fruit! Vorrei un'informazione." href="#">Scrivici su WhatsApp</a>
+        <a class="btn btn-vuoto" href="https://www.google.com/maps/search/?api=1&query=Via+Tre+Venezie+27+05100+Terni" target="_blank" rel="noopener">Apri in Maps</a>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Fresko Fruit, Via Tre Venezie 27, Borgo Bovio, Terni</span>
+    <span>Anteprima di <a href="https://frameagency.it" target="_blank" rel="noopener">FRAME Agency</a></span>
+  </div>
+</footer>
+
+<a class="btn wa-fisso" data-wa="Ciao Fresko Fruit! Vorrei ordinare." href="#" aria-label="Scrivi a Fresko Fruit su WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#wa"/></svg>Ordina</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></symbol></svg>
+
+<script>
+  const NUMERO = "393471890075";
+  document.querySelectorAll("[data-wa]").forEach(a => {
+    a.href = "https://wa.me/" + NUMERO + "?text=" + encodeURIComponent(a.dataset.wa);
+    a.target = "_blank"; a.rel = "noopener";
+  });
+  // Il pulsante fisso compare solo dopo la prima schermata
+  const fisso = document.querySelector(".wa-fisso");
+  const aggiorna = () => fisso.classList.toggle("nascosto", scrollY < innerHeight * 0.9);
+  aggiorna(); addEventListener("scroll", aggiorna, {passive:true});
+</script>
+</body>
+</html>
